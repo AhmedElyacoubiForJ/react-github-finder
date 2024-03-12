@@ -4,6 +4,8 @@ Install Tailwind CSS with Create React App [Create React App](https://tailwindcs
 
 
 ### `npm i daisyui`
+### `npm i daisyui`
+### `npm i react-router-dom react-icons`
 
 
 
