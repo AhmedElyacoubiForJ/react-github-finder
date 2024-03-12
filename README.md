@@ -1,6 +1,11 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Install Tailwind CSS with Create React App [Create React App](https://tailwindcss.com/docs/guides/create-react-app).
+
+
+### `npm i daisyui`
+
+
 
 ## Available Scripts
 
