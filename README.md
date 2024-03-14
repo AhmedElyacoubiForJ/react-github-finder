@@ -2,38 +2,21 @@
 
 Install Tailwind CSS with Create React App [Create React App](https://tailwindcss.com/docs/guides/create-react-app).
 
-
+## Available Scripts
+### `npm start`
+### `npm start`
 ### `npm i daisyui`
 ### `npm i daisyui`
 ### `npm i react-router-dom react-icons`
 
-
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 
-## Learn More
+## Learn More & Doc's
 
-Einarbeitung in Tailwind CSS [Tailwind Tutorial für Anfänger](https://www.youtube.com/watch?v=EBlJbrDN8VA) 
+Einarbeitung in Tailwind CSS [Tailwind Tutorial für Anfänger](https://www.youtube.com/watch?v=EBlJbrDN8VA)
 
+[Tailwind Example](https://github.com/AhmedElyacoubiForJ/tailwind-tutorial)
 
+[Daisyui Card](https://daisyui.com/components/card/)
