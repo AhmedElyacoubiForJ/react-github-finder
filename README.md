@@ -20,3 +20,5 @@ Einarbeitung in Tailwind CSS [Tailwind Tutorial für Anfänger](https://www.yout
 [Tailwind Example](https://github.com/AhmedElyacoubiForJ/tailwind-tutorial)
 
 [Daisyui Card](https://daisyui.com/components/card/)
+
+[JavaScript Reducer (origin React/Redux)](https://www.robinwieruch.de/javascript-reducer/#:~:text=The%20concept%20of%20a%20Reducer,manage%20state%20in%20an%20application.)
