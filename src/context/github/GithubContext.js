@@ -16,9 +16,8 @@ export const GithubProvider = ({ children }) => {
   const [state, dispatch] = useReducer(gitHubReducer, initialState);
 
   // Get initial users (testing purposes)
-  const fetchUsers = async () => {
-
-    setLoading()
+ /*  const fetchUsers = async () => {
+    setLoading();
 
     const response = await fetch(`${GUTHUB_URL}/users`, {
       headers: {
@@ -32,17 +31,44 @@ export const GithubProvider = ({ children }) => {
       type: "GET_USERS",
       payload: data,
     });
+  }; */
+
+  // Get search results
+  const searchUsers = async (text) => {
+    setLoading();
+
+    const params = new URLSearchParams({
+      q: text,
+    });
+
+    const response = await fetch(`${GUTHUB_URL}/search/users?${params}`, {
+      headers: {
+        Authorization: `token ${GITHUN_TOKEN}`,
+      },
+    });
+
+    // postmann what we get. destructing the result
+    const {items} = await response.json();
+    console.log(items)
+
+    dispatch({
+      type: "GET_USERS",
+      payload: items,
+    });
   };
+
   // Set loading
-  const setLoading = () => dispatch({
-    type: 'SET_LOADING'
-  })
+  const setLoading = () =>
+    dispatch({
+      type: "SET_LOADING",
+    });
+
   return (
     <GithubContext.Provider
       value={{
         users: state.users,
         loading: state.loading,
-        fetchUsers,
+        searchUsers,
       }}
     >
       {children}
