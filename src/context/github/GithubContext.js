@@ -47,15 +47,22 @@ export const GithubProvider = ({ children }) => {
       },
     });
 
+
     // postmann what we get. destructing the result
     const {items} = await response.json();
-    console.log(items)
 
     dispatch({
       type: "GET_USERS",
       payload: items,
     });
   };
+
+  // clear searched users
+  const clearUsers = () => {
+    dispatch({
+      type: "CLEAR_USERS",
+    });
+  }
 
   // Set loading
   const setLoading = () =>
@@ -69,6 +76,7 @@ export const GithubProvider = ({ children }) => {
         users: state.users,
         loading: state.loading,
         searchUsers,
+        clearUsers,
       }}
     >
       {children}
