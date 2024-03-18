@@ -10,13 +10,14 @@ const GITHUN_TOKEN = process.env.REACT_APP_GITHUB_TOKEN;
 export const GithubProvider = ({ children }) => {
   const initialState = {
     users: [],
+    user: {},
     loading: false,
   };
 
   const [state, dispatch] = useReducer(gitHubReducer, initialState);
 
   // Get initial users (testing purposes)
- /*  const fetchUsers = async () => {
+  /*  const fetchUsers = async () => {
     setLoading();
 
     const response = await fetch(`${GUTHUB_URL}/users`, {
@@ -47,9 +48,8 @@ export const GithubProvider = ({ children }) => {
       },
     });
 
-
     // postmann what we get. destructing the result
-    const {items} = await response.json();
+    const { items } = await response.json();
 
     dispatch({
       type: "GET_USERS",
@@ -57,12 +57,33 @@ export const GithubProvider = ({ children }) => {
     });
   };
 
+  // Get single user
+  const getUser = async (login) => {
+    setLoading();
+
+    const response = await fetch(`${GUTHUB_URL}/users/${login}`, {
+      headers: {
+        Authorization: `token ${GITHUN_TOKEN}`,
+      },
+    });
+
+    if (response.status === 404) {
+      window.location = "notfound";
+    } else {
+      const data = await response.json();
+      dispatch({
+        type: "GET_USER",
+        payload: data,
+      });
+    }
+  };
+
   // clear searched users
   const clearUsers = () => {
     dispatch({
       type: "CLEAR_USERS",
     });
-  }
+  };
 
   // Set loading
   const setLoading = () =>
@@ -75,8 +96,10 @@ export const GithubProvider = ({ children }) => {
       value={{
         users: state.users,
         loading: state.loading,
+        user: state.user,
         searchUsers,
         clearUsers,
+        getUser,
       }}
     >
       {children}
