@@ -34,21 +34,6 @@ const RepoItem = ({ repo }) => {
                 <FaUtensils className="mr-2"/> {forks}
             </div>
         </div>
-
-        {/* <div>
-            <a href={html_url} target="_blank" rel="noreferrer">
-              <FaEye className="inline mr-1"/> {watchers_count}
-            </a>
-            <a href={html_url} target="_blank" rel="noreferrer">
-              <FaStar className="inline mr-1"/> {stargazers_count}
-            </a>
-            <a href={html_url} target="_blank" rel="noreferrer">
-              <FaUtensils className="inline mr-1"/> {forks}
-            </a>
-            <a href={html_url} target="_blank" rel="noreferrer">
-              <FaInfo className="inline mr-1"/> {open_issues}
-            </a>
-        </div> */}
       </div>
     </div>
   );
