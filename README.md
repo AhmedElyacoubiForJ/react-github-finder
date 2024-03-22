@@ -17,7 +17,7 @@ Install Tailwind CSS with Create React App [Create React App](https://tailwindcs
 
 ### `npm i axios`
 
-[Vercel Online](https://vercel.com/ahmedelyacoubiforjs-projects/react-github-finder/C2gFPfXrHFpwtavwaFHmaw1GQgcm)
+[Vercel Online](https://vercel.com/)
 
 ## Learn More & Doc's
 
